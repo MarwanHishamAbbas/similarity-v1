@@ -1,7 +1,7 @@
 import { ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
-// cva => handle class dynamic changes
+// cva => handle variants of the components
 // clsx => join all classes together without optimizing
 // twMerge => handle the optimization of class
 
