@@ -1,8 +1,8 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
+import Paragraph from "../components/ui/Paragraph";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  return <h1>Hello Marwan</h1>;
+  return <Paragraph>Hello Marwan</Paragraph>;
 }
