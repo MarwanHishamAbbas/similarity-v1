@@ -4,9 +4,10 @@ import { buttonVariants } from "./ui/Button";
 import SignInButton from "./SignInButton";
 import SignOutButton from "./SignOutButton";
 import ThemeToggle from "./ThemeToggle";
+import { authOptions } from "@/lib/auth";
 
 const Navbar = async ({}) => {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   return (
     <div className="fixed backdrop-blur-sm bg-white/70 dark:bg-slate-900 z-50 top-0 left-0 right-0 h-20 border-b-slate-300 dark:border-b-slate-700 shadow-sm flex items-center justify-between">
       <div className="container max-w-7xl mx-auto w-full flex justify-between items-center">
