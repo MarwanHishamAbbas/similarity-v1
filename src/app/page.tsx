@@ -19,7 +19,7 @@ export default function Home() {
         <div className="h-full gap-6 flex flex-col justify-start lg:justify-center items-center lg:items-start">
           <LargeHeading
             size="lg"
-            className="three-d text-black dark:text-light-gold"
+            className="three-d text-black text-left dark:text-light-gold"
           >
             Easily Determine <br />
             Text Similarity
