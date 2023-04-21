@@ -32,7 +32,7 @@ const ThemeToggle: FC<ThemeToggleProps> = ({}) => {
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
           <Icons.Moon className="mr-2 h-4 w-4" />
-          <span>Moon</span>
+          <span>Dark</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
           <Icons.Laptop className="mr-2 h-4 w-4" />
