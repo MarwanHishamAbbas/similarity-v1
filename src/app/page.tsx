@@ -1,11 +1,8 @@
-import { Inter } from "next/font/google";
 import Paragraph from "../components/ui/Paragraph";
 import { Metadata } from "next";
 import LargeHeading from "@/components/ui/LargeHeading";
 import Link from "next/link";
 import Image from "next/image";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Similarity API | Home",
