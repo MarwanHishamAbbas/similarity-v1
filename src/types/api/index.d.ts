@@ -2,7 +2,7 @@ import { ApiKey } from "@prisma/client";
 import { type ZodIssue } from "zod";
 
 export interface CreateApiData {
-  createdApiKey: ApiKey;
+  createdApiKey: ApiKey | null;
   error: string | ZodIssue[] | null;
 }
 
