@@ -1,35 +1,38 @@
 "use client";
+
+import { cn } from "@/lib/utils";
+import { Copy } from "lucide-react";
 import { ButtonHTMLAttributes, FC } from "react";
 import { Button } from "./ui/Button";
 import { toast } from "./ui/Toast";
-import { Copy } from "lucide-react";
 
 interface CopyButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   valueToCopy: string;
 }
 
 const CopyButton: FC<CopyButtonProps> = ({
-  className,
   valueToCopy,
+  className,
   ...props
 }) => {
   return (
-    <>
-      <Button
-        className={className}
-        {...props}
-        onClick={() => {
-          navigator.clipboard.writeText(valueToCopy);
-          toast({
-            title: "Copied",
-            message: "API key copied to clipboard",
-            type: "success",
-          });
-        }}
-        variant="ghost"
-      />
+    <Button
+      {...props}
+      type="button"
+      onClick={() => {
+        navigator.clipboard.writeText(valueToCopy);
+
+        toast({
+          title: "Copied",
+          message: "API key copied to clipboard",
+          type: "success",
+        });
+      }}
+      variant="ghost"
+      className={cn("", className)}
+    >
       <Copy className="h-5 w-5" />
-    </>
+    </Button>
   );
 };
 
